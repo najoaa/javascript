@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div id="main">
+        <h1>BMI Calculator</h1>
+        <form id="bmi-form">
+            <label for="height">
+                Height (cm)
+                <input type="number" id="height" placeholder="Enter height in cm" min="100" max="250">
+            </label>
+            <label for="weight">
+                Weight (kg)
+                <input type="number" id="weight" placeholder="Enter weight in kg" min="30" max="300">
+            </label>
+            <button type="button" id="button">Calculate BMI</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <div id="bmi-result">
+                <h2>Your BMI: <span id="score">0</span></h2>
+                <p id="bmi-category">Category: </p>
+            </div>
+            
+            <div id="bmi-categories">
+                <h3>BMI Categories:</h3>
+                <ul>
+                    <li><span class="category">Underweight</span>: BMI below 18.5</li>
+                    <li><span class="category">Healthy Weight</span>: BMI between 18.5 and 24.9</li>
+                    <li><span class="category">Overweight</span>: BMI between 25 and 29.9</li>
+                    <li><span class="category">Class 1 Obesity</span>: BMI between 30 and 34.9</li>
+                    <li><span class="category">Class 2 Obesity</span>: BMI between 35 and 39.9</li>
+                    <li><span class="category">Class 3 Obesity (Severe Obesity)</span>: BMI of 40 or greater</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
